@@ -1,0 +1,11 @@
+{
+  "Meta": {
+    "title": "Daniel Vue Template",
+    "description": "",
+    "keyword": ""
+  },
+  "Menu":{
+    "home": "Home",
+    "list": "List"
+  }
+}

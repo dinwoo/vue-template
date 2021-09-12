@@ -1,13 +1,16 @@
 <template lang="pug">
-article.home
+article.card-info
+  CardInfo(v-if="!isLoading" :cardData="course.list" routeName="CourseInfo")
+
 </template>
 
 <script>
 import { mapState, mapActions } from "vuex";
+import CardInfo from "@/components/CardInfo";
 
 export default {
-  name: "Home",
-  components: {},
+  name: "CardInfo",
+  components: { CardInfo },
   props: {},
   mixins: [],
   data() {
@@ -17,17 +20,9 @@ export default {
     ...mapState(["isLoading"]),
   },
   created() {},
-  mounted() {
-    this.getApi()
-      .then((res) => {
-        console.log(res);
-      })
-      .catch(() => {
-        console.log("fail");
-      });
-  },
+  mounted() {},
   methods: {
-    ...mapActions(["getApi"]),
+    ...mapActions([]),
   },
   watch: {},
 };
